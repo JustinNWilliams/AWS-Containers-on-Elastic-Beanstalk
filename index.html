@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin's Awesome Web App</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ffdd57;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #f0f0f0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    footer a {
+      color: #ffdd57;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Floating Stars (Background) */
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .stars div {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: #ffdd57;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffdd57, 0 0 20px #ffdd57;
+      animation: twinkle 5s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Generate Random Stars */
+    .stars div:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+    .stars div:nth-child(2) { top: 50%; left: 25%; animation-delay: 2s; }
+    .stars div:nth-child(3) { top: 80%; left: 60%; animation-delay: 4s; }
+    .stars div:nth-child(4) { top: 10%; left: 70%; animation-delay: 1s; }
+    .stars div:nth-child(5) { top: 40%; left: 85%; animation-delay: 3s; }
+  </style>
+</head>
+<body>
+  <!-- Floating Stars -->
+  <div class="stars">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Main Content -->
+  <h1>Welcome to Justin's Web App!</h1>
+  <h2>Check out this special image I chose:</h2>
+  <img src="https://storage.googleapis.com/nextwork_course_resources/courses/aws/AWS%20Project%20People%20projects/Project%3A%20Containers%20on%20Elastic%20Beanstalk/NextWork%20Course%20Trophy%20Badge.png" 
+       alt="NextWork AWS Star">
+  <h1>If you can see this, Elastic Beanstalk deployed my work successfully!</h1>
+  
+  <!-- Footer -->
+  <footer>
+    Created with ☁️ by <a href="https://github.com/JustinNWilliams" target="_blank">Justin Williams</a>
+  </footer>
+</body>
+</html>
